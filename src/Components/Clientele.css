@@ -1,0 +1,47 @@
+/* src/Components/NuestraClientela.css */
+
+/* Keyframes for the continuous scroll animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half the width of the duplicated content */
+  }
+}
+
+.logos-marquee-container {
+  /* Ensure the container is wider than the visible area to enable smooth scrolling */
+  width: 100%;
+  overflow: hidden; /* Hide anything outside this container */
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.logos-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite; /* Adjust duration to control speed */
+  /* We duplicate the content in JSX, so this animation moves it half its total width */
+}
+
+.logos-marquee:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.logo-item {
+  display: inline-block; /* Ensure items align horizontally */
+  vertical-align: middle;
+  padding: 0 20px; /* Spacing between logos */
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+  .logos-marquee {
+    animation-duration: 20s; /* Faster scroll on smaller screens */
+  }
+  .logo-item {
+    padding: 0 10px;
+  }
+  .logo-item img {
+    height: 16px; /* Smaller logos on mobile */
+  }
+}
