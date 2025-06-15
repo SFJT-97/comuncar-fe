@@ -7,28 +7,53 @@ import { FaChevronLeft, FaChevronRight, FaDotCircle } from 'react-icons/fa';
 const carouselItems = [
   {
     id: 1,
-    url: 'https://picsum.photos/seed/carousel1/1200/800',
-    description: 'Nuestra dedicación al detalle en cada proyecto, asegurando resultados impecables.',
+    url: '/deprominsa-1.webp',
+    description: 'Proyecto Paramillos – Uspallata (Mza.) Deprominsa - Reunión con autoridades locales, representantes de FF. AA. Dirigentes políticos, etc.',
   },
   {
     id: 2,
-    url: 'https://picsum.photos/seed/carousel2/1200/800',
-    description: 'Momentos clave de nuestras interacciones con clientes, construyendo relaciones sólidas.',
+    url: '/deprominsa-2.webp',
+    description: 'Proyecto Paramillos – Uspallata (Mza.) Deprominsa - Reunión con autoridades locales, representantes de FF. AA. Dirigentes políticos, etc.',
   },
   {
     id: 3,
-    url: 'https://picsum.photos/seed/carousel3/1200/800',
-    description: 'El equipo de Comunicar Consultora, expertos en comunicación estratégica a su servicio.',
+    url: '/deprominsa-3.webp',
+    description: 'Proyecto Paramillos – Uspallata (Mza.) Deprominsa - Visita de Periodistas y Medios a Proyecto.',
   },
   {
     id: 4,
-    url: 'https://picsum.photos/seed/carousel4/1200/800',
-    description: 'Infraestructura y herramientas de vanguardia que utilizamos para potenciar su mensaje.',
+    url: '/deprominsa-4.webp',
+    description: 'Proyecto Paramillos – Uspallata (Mza.) Deprominsa - Visita de Periodistas y Medios a Proyecto.',
   },
   {
     id: 5,
-    url: 'https://picsum.photos/seed/carousel5/1200/800',
-    description: 'Impacto de nuestras campañas en diversos sectores de la industria y la sociedad.',
+    url: '/anchoris-1.webp',
+    description: 'Proyecto Anchoris – San Rafael (Mza) Portal del Oro SA - Reuniones Informativas con resent comunidades San Rafael/Gral. Alvear.',
+  },
+    {
+    id: 6,
+    url: '/anchoris-2.webp',
+    description: 'Proyecto Anchoris – San Rafael (Mza) Portal del Oro SA - Reuniones Informativas con resent comunidades San Rafael/Gral. Alvear.',
+  },
+    {
+    id: 7,
+    url: '/anchoris-3.webp',
+    description: 'Proyectos Anchoris – San Rafael (Mza) Portal del Oro SA - Conferencia de Prensa de Ingenieros de Minas de UNSJ en Gral. Alvear - Mza.',
+  },
+    {
+    id: 8,
+    url: '/anchoris-4.webp',
+    description: 'Proyectos Anchoris – San Rafael (Mza) Portal del Oro SA - Conferencia de Prensa de Ingenieros de Minas de UNSJ en Gral. Alvear - Mza.',
+  },
+    {
+    id: 9,
+    url: '/yamiri.webp',
+    description: 'Yamiri SEM – La Rioja -Media Training/ Gestión de entrevistas periodísticas.',
+  },
+    {
+    id: 10,
+    url: '/yamiri-1.webp',
+    description: 'Yamiri SEM – La Rioja -Media Training/ Gestión de entrevistas periodísticas.',
   },
 ];
 
