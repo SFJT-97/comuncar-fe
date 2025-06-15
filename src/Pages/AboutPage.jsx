@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/Pages/AboutPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';

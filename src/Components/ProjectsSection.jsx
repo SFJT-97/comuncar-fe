@@ -151,8 +151,8 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto mb-8">
         <MapContainer className="round-2xl" center={[-34.6037, -64]} zoom={4} style={{ height: '500px', width: '100%', zIndex: 0 }}>
           <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; OpenStreetMap contributors'
+            url="https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png"
+            attribution='&copy; OpenStreetMap contributors + Instituto Geográfico Nacional'
           />
           <CustomAttribution />
 

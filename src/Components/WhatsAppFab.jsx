@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/Components/WhatsAppFAB.jsx
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon

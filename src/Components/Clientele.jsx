@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/Components/Clientele.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -11,33 +12,35 @@ const sectionVariants = {
 // List of placeholder client logos
 // IMPORTANT: Replace these with actual logo image URLs (e.g., from your public folder)
 const clients = [
-  { name: 'YPF', logoUrl: 'https://via.placeholder.com/150x80?text=YPF' },
-  { name: 'Mercado Libre', logoUrl: 'https://via.placeholder.com/150x80?text=Mercado+Libre' },
-  { name: 'BBVA Argentina', logoUrl: 'https://via.placeholder.com/150x80?text=BBVA+Argentina' },
-  { name: 'Globant', logoUrl: 'https://via.placeholder.com/150x80?text=Globant' },
-  { name: 'Grupo OSDE', logoUrl: 'https://via.placeholder.com/150x80?text=Grupo+OSDE' },
-  { name: 'Banco San Juan', logoUrl: 'https://via.placeholder.com/150x80?text=Banco+San+Juan' },
-  { name: 'Arcor', logoUrl: 'https://via.placeholder.com/150x80?text=Arcor' },
-  { name: 'Loma Negra', logoUrl: 'https://via.placeholder.com/150x80?text=Loma+Negra' },
-  { name: 'Genneia', logoUrl: 'https://via.placeholder.com/150x80?text=Genneia' },
-  { name: 'PedidosYa', logoUrl: 'https://via.placeholder.com/150x80?text=PedidosYa' },
-  { name: 'Techint Group', logoUrl: 'https://via.placeholder.com/150x80?text=Techint+Group' },
-  { name: 'Telecom Argentina', logoUrl: 'https://via.placeholder.com/150x80?text=Telecom+Argentina' },
-  { name: 'Banco Macro', logoUrl: 'https://via.placeholder.com/150x80?text=Banco+Macro' },
+  { name: 'Andacollo', logoUrl: '/andacollo-logo.webp' },
+  { name: 'Campogrande', logoUrl: '/campogrande-logo.webp' },
+  { name: 'Castillian Resources', logoUrl: '/castillian-logo.webp' },
+  { name: 'Deprominsa', logoUrl: '/deprominsa-logo.webp' },
+  { name: 'Energia Mineral', logoUrl: '/energia-mineral-logo.webp' },
+  { name: 'Falconbridge', logoUrl: '/falconbridge-logo.webp' },
+  { name: 'Glencore Pachon', logoUrl: '/glencore-logo.webp' },
+  { name: 'Golden Mining', logoUrl: '/golden-logo.webp' },
+  { name: 'Ivisa SA', logoUrl: '/ivisa-logo.webp' },
+  { name: 'Latin American Minerals Inc', logoUrl: '/latam-metals.webp' },
+  { name: 'Libero Copper', logoUrl: '/libero-logos.webp' },
+  { name: 'Minera Andes', logoUrl: '/minera-andes-logo.webp' },
+  { name: 'Panedile', logoUrl: '/panedile-logo.webp' },
+  { name: 'Veladero', logoUrl: '/veladero.webp' },
   // Duplicate clients to ensure continuous loop without a visible jump
-  { name: 'YPF', logoUrl: 'https://via.placeholder.com/150x80?text=YPF' },
-  { name: 'Mercado Libre', logoUrl: 'https://via.placeholder.com/150x80?text=Mercado+Libre' },
-  { name: 'BBVA Argentina', logoUrl: 'https://via.placeholder.com/150x80?text=BBVA+Argentina' },
-  { name: 'Globant', logoUrl: 'https://via.placeholder.com/150x80?text=Globant' },
-  { name: 'Grupo OSDE', logoUrl: 'https://via.placeholder.com/150x80?text=Grupo+OSDE' },
-  { name: 'Banco San Juan', logoUrl: 'https://via.placeholder.com/150x80?text=Banco+San+Juan' },
-  { name: 'Arcor', logoUrl: 'https://via.placeholder.com/150x80?text=Arcor' },
-  { name: 'Loma Negra', logoUrl: 'https://via.placeholder.com/150x80?text=Loma+Negra' },
-  { name: 'Genneia', logoUrl: 'https://via.placeholder.com/150x80?text=Genneia' },
-  { name: 'PedidosYa', logoUrl: 'https://via.placeholder.com/150x80?text=PedidosYa' },
-  { name: 'Techint Group', logoUrl: 'https://via.placeholder.com/150x80?text=Techint+Group' },
-  { name: 'Telecom Argentina', logoUrl: 'https://via.placeholder.com/150x80?text=Telecom+Argentina' },
-  { name: 'Banco Macro', logoUrl: 'https://via.placeholder.com/150x80?text=Banco+Macro' },
+  { name: 'Andacollo', logoUrl: '/andacollo-logo.webp' },
+  { name: 'Campogrande', logoUrl: '/campogrande-logo.webp' },
+  { name: 'Castillian Resources', logoUrl: '/castillian-logo.webp' },
+  { name: 'Deprominsa', logoUrl: '/deprominsa-logo.webp' },
+  { name: 'Energia Mineral', logoUrl: '/energia-mineral-logo.webp' },
+  { name: 'Falconbridge', logoUrl: '/falconbridge-logo.webp' },
+  { name: 'Glencore Pachon', logoUrl: '/glencore-logo.webp' },
+  { name: 'Golden Mining', logoUrl: '/golden-logo.webp' },
+  { name: 'Ivisa SA', logoUrl: '/ivisa-logo.webp' },
+  { name: 'Latin American Minerals Inc', logoUrl: '/latam-metals.webp' },
+  { name: 'Libero Copper', logoUrl: '/libero-logos.webp' },
+  { name: 'Minera Andes', logoUrl: '/minera-andes-logo.webp' },
+  { name: 'Panedile', logoUrl: '/panedile-logo.webp' },
+  { name: 'Veladero', logoUrl: '/veladero.webp' },
 ];
 
 const NuestraClientela = () => {
@@ -66,7 +69,7 @@ const NuestraClientela = () => {
               <img
                 src={client.logoUrl}
                 alt={`${client.name} Logo`}
-                className="h-20 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-20 object-contain filter hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}

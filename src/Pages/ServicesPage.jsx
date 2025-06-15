@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/Components/ServicesPage.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/Components/GalleryCarousel.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
