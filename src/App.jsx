@@ -9,7 +9,7 @@ import ContactPage from './Pages/ContactPage';
 
 import ScrollToTop from './Components/ScrollToTop';
 import WhatsAppFAB from './Components/WhatsAppFab';
-import CaseStudies from './Pages/CaseStudies';
+/* import CaseStudies from './Pages/CaseStudies'; */
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
+            {/* <Route path="/case-studies" element={<CaseStudies />} /> */}
           </Route>
         </Routes>
         <WhatsAppFAB />

@@ -42,7 +42,8 @@ const Header = () => {
           <li><Link to="/" className="nav-item">Inicio</Link></li>
           <li><Link to="/about" className="nav-item">Nosotros</Link></li>
           <li><Link to="/services" className="nav-item">Servicios</Link></li>
-          <li><Link to="/case-studies" className="nav-item">Casos de Éxito</Link></li>
+          {/* Removed until built */}
+          {/* <li><Link to="/case-studies" className="nav-item">Casos de Éxito</Link></li> */}
           <li>
             <Link to="/contact" className="btn-brand">
               Contáctanos
@@ -74,11 +75,12 @@ const Header = () => {
                     Servicios
                   </Link>
                 </li>
-                <li>
+                {/* Removed until built */}
+{/*                 <li>
                   <Link to="/case-studies" className="nav-item block" onClick={toggleMenu}>
                     Casos de Éxito
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact" className="btn-brand mx-4 block text-center" onClick={toggleMenu}>
                     Contáctanos
