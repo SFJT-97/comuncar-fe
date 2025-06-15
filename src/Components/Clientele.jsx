@@ -25,25 +25,14 @@ const clients = [
   { name: 'Libero Copper', logoUrl: '/libero-logos.webp' },
   { name: 'Minera Andes', logoUrl: '/minera-andes-logo.webp' },
   { name: 'Panedile', logoUrl: '/panedile-logo.webp' },
-  { name: 'Veladero', logoUrl: '/veladero.webp' },
-  // Duplicate clients to ensure continuous loop without a visible jump
-  { name: 'Andacollo', logoUrl: '/andacollo-logo.webp' },
-  { name: 'Campogrande', logoUrl: '/campogrande-logo.webp' },
-  { name: 'Castillian Resources', logoUrl: '/castillian-logo.webp' },
-  { name: 'Deprominsa', logoUrl: '/deprominsa-logo.webp' },
-  { name: 'Energia Mineral', logoUrl: '/energia-mineral-logo.webp' },
-  { name: 'Falconbridge', logoUrl: '/falconbridge-logo.webp' },
-  { name: 'Glencore Pachon', logoUrl: '/glencore-logo.webp' },
-  { name: 'Golden Mining', logoUrl: '/golden-logo.webp' },
-  { name: 'Ivisa SA', logoUrl: '/ivisa-logo.webp' },
-  { name: 'Latin American Minerals Inc', logoUrl: '/latam-metals.webp' },
-  { name: 'Libero Copper', logoUrl: '/libero-logos.webp' },
-  { name: 'Minera Andes', logoUrl: '/minera-andes-logo.webp' },
-  { name: 'Panedile', logoUrl: '/panedile-logo.webp' },
-  { name: 'Veladero', logoUrl: '/veladero.webp' },
+  { name: 'Veladero', logoUrl: '/veladero-logo.webp' },
 ];
 
 const NuestraClientela = () => {
+  // Duplicate the clients array multiple times for a truly seamless loop
+  // We'll duplicate it 3 times to ensure ample content for the marquee effect.
+  const duplicatedClients = [...clients, ...clients, ...clients];
+
   return (
     <motion.section
       className="surface py-12 px-4 overflow-hidden" // overflow-hidden is crucial for marquee
@@ -64,12 +53,12 @@ const NuestraClientela = () => {
 
       <div className="logos-marquee-container">
         <div className="logos-marquee">
-          {clients.map((client, index) => (
+          {duplicatedClients.map((client, index) => (
             <div key={index} className="logo-item flex-shrink-0 mx-4">
               <img
                 src={client.logoUrl}
                 alt={`${client.name} Logo`}
-                className="h-20 object-contain filter hover:grayscale-0 transition-all duration-300"
+                className="h-20 object-contain filter transition-all duration-300"
               />
             </div>
           ))}

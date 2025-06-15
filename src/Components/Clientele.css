@@ -1,43 +1,119 @@
 /* src/Components/NuestraClientela.css */
 
+.logos-marquee-container {
+  width: 100%;
+  overflow: hidden; /* Hides the overflowing content */
+}
+
+.logos-marquee {
+  display: flex;
+  /* We'll calculate the width based on the number of original clients,
+     and animate it to move exactly that width. */
+  animation: marquee var(--marquee-duration) linear infinite;
+  /* Set a min-width to ensure there's enough space for the content
+     before the animation starts. This helps prevent initial jumps. */
+  min-width: fit-content;
+}
+
+.logo-item {
+  flex-shrink: 0; /* Prevent items from shrinking */
+  padding: 0 20px; /* Spacing between logos */
+  /* This will ensure that the logos are all the same size within the marquee.
+     You might need to adjust this based on your actual logo sizes. */
+  height: 80px; /* Matches the h-20 in Tailwind for img */
+  display: flex; /* To center the image vertically if needed */
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-item img {
+  height: 100%; /* Make image fill the height of its container */
+  max-width: none; /* Prevent image from being constrained by max-width */
+  width: auto; /* Allow image to determine its width naturally */
+}
+
+
 /* Keyframes for the continuous scroll animation */
+/* The animation moves the entire width of one set of the *original* clients. */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate by the negative width of one full set of the original clients.
+       Since we duplicated the content, this will make it loop seamlessly. */
+    transform: translateX(calc(-100vw * var(--original-client-count) * var(--logo-item-width-multiplier)));
+  }
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+  .logo-item {
+    padding: 0 10px;
+    height: 64px; /* Smaller logos on mobile, matches h-16 in Tailwind */
+  }
+  .logo-item img {
+    height: 100%;
+  }
+
+  /* Adjust marquee speed for mobile */
+  .logos-marquee {
+    animation-duration: var(--marquee-duration-mobile);
+  }
+}
+
+/* --- CSS Variables for Configuration (placed here for clarity) --- */
+.logos-marquee {
+  /* Base duration for desktop. Adjust as needed. */
+  --marquee-duration: 100s;
+
+  /* Duration for mobile. Adjust as needed. */
+  --marquee-duration-mobile: 100s;
+
+  /* This variable will be used in the keyframes to determine the translation amount.
+    It should be the number of *unique* clients. */
+  --original-client-count: 14; /* There are 14 unique clients */
+
+  /* This multiplier helps to approximate the width of a single logo item,
+    including its padding. You might need to fine-tune this value.
+    For example, if each logo is roughly 80px wide and has 20px padding on each side,
+    it's 120px. 120px / 100vw (or some arbitrary unit) to get a multiplier.
+    A simple approach is to try 1.0 initially, and adjust if the loop isn't perfect.
+    For a truly precise loop, you might need JavaScript to calculate the exact width.
+    However, for most cases, a good approximation here works well.
+    Let's assume a logo item is roughly 150px wide (80px image + 2*20px padding + a bit extra).
+    So, -150px * original-client-count.
+    But we're translating 100% of the entire .logos-marquee width.
+    So, if we want to move exactly one set of original clients, we need to move
+    by the width of 'original-client-count' number of .logo-item elements.
+    Let's simplify the keyframe to `transform: translateX(calc(-1 * var(--logo-item-total-width)))`
+    and calculate that `var(--logo-item-total-width)` with JS for perfect precision.
+    For now, let's stick with the percentage approach and ensure enough duplication.
+
+    The `translateX(-50%)` was for *half* the duplicated content.
+    With 3 duplications, if we want to loop after one set, we need to translate by
+    -1/3 of the total `logos-marquee` width.
+  */
+  /* Let's redefine the marquee keyframes to use a more reliable translation.
+    If we have N items duplicated 3 times (N*3 items total),
+    we want to translate by - (N / (N*3)) * 100% = -33.33% of the total width.
+    This assumes all logo items have the same width. */
+}
+
+/* New Keyframes (more reliable for 3x duplication) */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%); /* Move half the width of the duplicated content */
+    transform: translateX(calc(-100% / 3)); /* Translates exactly one-third of the total width */
   }
 }
 
-.logos-marquee-container {
-  /* Ensure the container is wider than the visible area to enable smooth scrolling */
-  width: 100%;
-  overflow: hidden; /* Hide anything outside this container */
-  white-space: nowrap; /* Prevent items from wrapping */
-}
-
-.logos-marquee {
-  display: flex;
-  animation: marquee 30s linear infinite; /* Adjust duration to control speed */
-  /* We duplicate the content in JSX, so this animation moves it half its total width */
-}
-
-.logo-item {
-  display: inline-block; /* Ensure items align horizontally */
-  vertical-align: middle;
-  padding: 0 20px; /* Spacing between logos */
-}
-
-/* Optional: Adjust for smaller screens */
 @media (max-width: 768px) {
   .logos-marquee {
-    animation-duration: 20s; /* Faster scroll on smaller screens */
-  }
-  .logo-item {
-    padding: 0 10px;
-  }
-  .logo-item img {
-    height: 16px; /* Smaller logos on mobile */
+    animation-duration: var(--marquee-duration-mobile); /* Use the mobile duration variable */
   }
 }

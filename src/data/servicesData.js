@@ -87,16 +87,28 @@ export const servicesData = [
         ]
       },
       {
-        heading: "Organización de eventos, reuniones, charlas y/o conferencias de prensa para presentaciones institucionales, de actividades y de la empresa en particular."
+        heading: "Organización de eventos, reuniones, charlas y/o conferencias de prensa para presentaciones institucionales, de actividades y de la empresa en particular.",
+        items: [
+          "Planificación y ejecución de eventos para lanzamiento de proyectos, conferencias anuales y ruedas de prensa para anuncios importantes."
+        ]
       },
       {
-        heading: "Elaboración de estrategias de prevención para evitar malas interpretaciones de determinados temas por parte de los medios."
+        heading: "Elaboración de estrategias de prevención para evitar malas interpretaciones de determinados temas por parte de los medios.",
+        items: [
+          "Desarrollo de protocolos de crisis y mensajes clave para manejar situaciones delicadas y prevenir coberturas negativas."
+        ]
       },
       {
-        heading: "Capacitación en media training."
+        heading: "Capacitación en media training.",
+        items: [
+          "Entrenamiento a voceros y directivos de la empresa para interactuar eficazmente con los medios de comunicación."
+        ]
       },
       {
-        heading: "Gestión de notas, difusión simultánea de noticias, coordinación de entrevistas, desayunos/almuerzos de trabajo, organización de visitas/viajes, ruedas de prensa, redacción de carpetas de información, auspicios institucionales."
+        heading: "Gestión de notas, difusión simultánea de noticias, coordinación de entrevistas, desayunos/almuerzos de trabajo, organización de visitas/viajes, ruedas de prensa, redacción de carpetas de información, auspicios institucionales.",
+        items: [
+          "Coordinación integral para la visibilidad de la empresa, incluyendo la elaboración de comunicados y la facilitación de oportunidades de medios."
+        ]
       },
       {
         heading: "Auditoria permanente de medios",

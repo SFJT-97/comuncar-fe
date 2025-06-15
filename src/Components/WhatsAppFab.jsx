@@ -8,7 +8,7 @@ const WhatsAppFAB = () => {
   // IMPORTANT: Replace '1234567890' with your actual WhatsApp phone number,
   // including the country code, without '+' or leading zeros.
   // Example for Argentina (country code +54) and a local number: '5492641234567'
-  const whatsappNumber = '5492641234567'; // Placeholder: Replace with your number
+  const whatsappNumber = '542645066666'; // Placeholder: Replace with your number
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
