@@ -23,10 +23,6 @@
   /* We duplicate the content in JSX, so this animation moves it half its total width */
 }
 
-.logos-marquee:hover {
-  animation-play-state: paused; /* Pause animation on hover */
-}
-
 .logo-item {
   display: inline-block; /* Ensure items align horizontally */
   vertical-align: middle;
